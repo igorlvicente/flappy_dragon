@@ -159,11 +159,14 @@ impl State {
         self.mode = GameMode::Playing;
         self.player = Player::new(5, 25);
         self.frame_time = 0.0;
+        self.obstacle = Obstacle::new(SCREEN_WIDTH, 0);
+        self.score = 0;
     }
 
     fn dead(&mut self, context: &mut BTerm) {
         context.cls();
         context.print_centered(5, "You are dead");
+        context.print_centered(6, &format!("You earned {} points", self.score));
         context.print_centered(8, "(P) Play Again");
         context.print_centered(9, "(Q) Quit Game");
         if let Some(key) = context.key {
