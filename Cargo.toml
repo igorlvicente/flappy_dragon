@@ -2,6 +2,7 @@
 name = "flappy_dragon"
 version = "0.1.0"
 edition = "2018"
+authors = ["Igor L. Vicente <igorlvicente@protonmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
